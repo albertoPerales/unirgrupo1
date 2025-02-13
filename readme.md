@@ -8,6 +8,7 @@ Este proyecto ha sido desarrollado como parte de la asignatura **Desarrollo Web 
 - CSS3
 - JavaScript
 - Bootstrap
+- Slick.js
 
 ## 👥 Integrantes del grupo
 
