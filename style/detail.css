@@ -1,1 +1,44 @@
 /* Estilos exclusivos de la página detail */
+.movie-title{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+img{
+    height: 400px;
+    object-fit: contain;
+}
+.info-content{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: rgb(29, 29, 29);
+    border-radius: 20px;
+    padding: 30px 30px;
+}
+.personalizado{
+    background-color: #DC3545; 
+    border-color: #DC3545; 
+    font-size: large; 
+}
+.card-body{
+    background-color: rgb(116, 116, 116);
+}
+.personalizado:hover{
+    background-color: #a42532;
+    border-color: #a42532;
+    box-shadow: 0 0 20px 1px rgba(128, 128, 128, 0.166);
+}
+.personalizado:active{
+    background-color: #a42532 !important; 
+    border-color: #a42532 !important;
+    box-shadow: 0 0 20px 1px rgba(128, 128, 128, 0.166);
+}
+.personalizado:focus-visible{
+    background-color: #a42532 !important; 
+    border-color: #a42532 !important;
+    outline: solid 1.5px #a42532;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
