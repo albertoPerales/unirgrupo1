@@ -21,10 +21,12 @@ const renderMovies = (movies, containerId, title, sliderClass) => {
     <div class="movie-card">
       <div class="card bg-dark text-white">
         <button id="fav-btn-${movie.id}" class="fav-btn btn btn-warning position-absolute top-10 end-0 mt-2 me-2 fs-5" onclick="toggleFavorite(${movie.id})">☆</button>
-        <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="">
+        <a href="./views/detail.html?id=${movie.id}">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="">
+        </a>
         <div class="card-body">
           <h3 class="card-title fs-5">
-            <a href="#" class="text-white text-decoration-none">
+            <a href="./views/detail.html?id=${movie.id}" class="text-white text-decoration-none">
               ${movie.title}
             </a>
           </h3>
