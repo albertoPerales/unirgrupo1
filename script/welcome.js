@@ -35,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ).textContent = `Bienvenid@, ${usuario.nombreuser}`;
     const logoutBtn = document.getElementById("logout");
     const deleteAccountBtn = document.getElementById("deleteAccount");
+
     logoutBtn.addEventListener("click", () => {
       usuario.logged_in = false;
-      console.log("Final user", usuario);
       sessionStorage.setItem("usuario", JSON.stringify(usuario));
       location.reload();
     });

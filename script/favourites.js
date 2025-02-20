@@ -1,23 +1,3 @@
-const getFavorites = () => {
-  return JSON.parse(localStorage.getItem("favorites")) || [];
-};
-
-const setFavorites = (favorites) => {
-  localStorage.setItem("favorites", JSON.stringify(favorites));
-};
-
-const fetchMovieById = async (id) => {
-  try {
-    const response = await fetch(
-      `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=es-ES`
-    );
-    return await response.json();
-  } catch (error) {
-    console.error("Error al obtener la película:", error);
-    return [];
-  }
-};
-
 const fetchFavoriteMovies = async () => {
   const favoriteIds = getFavorites();
 

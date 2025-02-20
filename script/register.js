@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const usuarioSesion = sessionStorage.getItem("usuario");
   let usuario = JSON.parse(usuarioSesion);
 
-  if (usuario.logged_in) location.href = "../index.html";
+  if (usuario?.logged_in) location.href = "../index.html";
 });
 
 const validacion = () => {
@@ -39,4 +39,3 @@ const envioformulario = () => {
 };
 
 document.getElementById("send").addEventListener("click", envioformulario);
-
