@@ -2,6 +2,14 @@
 
 Este proyecto ha sido desarrollado como parte de la asignatura **Desarrollo Web Responsive** del **Máster en Diseño y Desarrollo de Interfaces Web**.
 
+**Páginas**
+Inicio
+Detalle
+Login
+Register
+Búsqueda
+Favoritos
+
 ## 🛠️ Tecnologías utilizadas
 
 - HTML5

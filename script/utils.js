@@ -1,1 +1,0 @@
-// Todo lo relativo a funciones reutilizables

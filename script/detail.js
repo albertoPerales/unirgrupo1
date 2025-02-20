@@ -1,5 +1,3 @@
-const API_KEY = "b89b1e1077ca792380cfdc3b05ff9966";
-const BASE_URL = "https://api.themoviedb.org/3";
 const title = document.querySelector(".title-content");
 const info = document.querySelector(".synopsis");
 const poster = document.querySelector(".poster-content");
@@ -7,6 +5,7 @@ const masinfo = document.querySelector(".card-body");
 const content = document.querySelector('#main-content');
 const urlParams = new URLSearchParams(window.location.search);
 const ident = urlParams.get('id');
+
 //indice del vídeo a mostrar
 let indice = 0;
 

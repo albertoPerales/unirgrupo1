@@ -1,6 +1,3 @@
-const API_KEY = "b89b1e1077ca792380cfdc3b05ff9966";
-const BASE_URL = `https://api.themoviedb.org/3`;
-
 const fetchMoviesData = async (endpoint) => {
   try {
     const response = await fetch(
@@ -9,12 +6,11 @@ const fetchMoviesData = async (endpoint) => {
     const data = await response.json();
     return data.results;
   } catch (error) {
-    console.error("Error al obtener la película:", error);
     return [];
   }
 };
 
-const renderMovies = (movies, containerId, title, sliderClass) => {
+const renderPopularMovies = (movies, containerId, title, sliderClass) => {
   const moviesHTML = movies
     .map(
       (movie) => `
@@ -22,7 +18,7 @@ const renderMovies = (movies, containerId, title, sliderClass) => {
       <div class="card bg-dark text-white">
         <button id="fav-btn-${movie.id}" class="fav-btn btn btn-warning position-absolute top-10 end-0 mt-2 me-2 fs-5" onclick="toggleFavorite(${movie.id})">☆</button>
         <a href="./views/detail.html?id=${movie.id}">
-          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="">
+          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt=${movie.title}>
         </a>
         <div class="card-body">
           <h3 class="card-title fs-5">
@@ -59,7 +55,7 @@ const renderMovies = (movies, containerId, title, sliderClass) => {
 
 const loadMovies = async () => {
   const popularMovies = await fetchMoviesData("/movie/popular");
-  renderMovies(
+  renderPopularMovies(
     popularMovies,
     "popular-content",
     "Películas Populares",
@@ -67,7 +63,7 @@ const loadMovies = async () => {
   );
 
   const trendingMovies = await fetchMoviesData("/trending/movie/day");
-  renderMovies(
+  renderPopularMovies(
     trendingMovies,
     "trending",
     "Películas del Día",
@@ -75,7 +71,7 @@ const loadMovies = async () => {
   );
 
   const topRatedMovies = await fetchMoviesData("/movie/top_rated");
-  renderMovies(
+  renderPopularMovies(
     topRatedMovies,
     "top-rated-content",
     "Películas Top",

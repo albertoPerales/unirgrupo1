@@ -1,61 +1,71 @@
-/* Estilos exclusivos de la página detail */
-.movie-title{
+.movie-title {
     font-family: Arial, Helvetica, sans-serif;
     height: 120px;
     display: flex;
     align-items: center;
     padding: 0 40px;
-    color:#DC3545;
+    color: #DC3545;
 }
-.poster-content{
+
+.poster-content {
     padding: 0px 40px;
 }
-img{
+
+img {
     height: 400px;
     object-fit: contain;
 }
-.info-content{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+.info-content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     background-color: rgb(29, 29, 29);
     border-radius: 20px;
     padding: 30px 30px;
 }
-.personalizado{
-    background-color: #DC3545; 
-    border-color: #DC3545; 
-    font-size: large; 
+
+.personalizado {
+    background-color: #DC3545;
+    border-color: #DC3545;
+    font-size: large;
 }
-.card-body{
+
+.card-body {
     background-color: rgb(116, 116, 116);
 }
-.galeria{
+
+.galeria {
     padding: 40px;
 }
-.dropdown{
+
+.dropdown {
     padding: 50px;
 }
-.dropdown-item{
+
+.dropdown-item {
     cursor: pointer;
-    &:active{
+
+    &:active {
         background-color: #DC3545;
     }
 }
-.personalizado:hover{
+
+.personalizado:hover {
     background-color: #a42532;
     border-color: #a42532;
     box-shadow: 0 0 20px 1px rgba(128, 128, 128, 0.166);
 }
-.personalizado:active{
-    background-color: #a42532 !important; 
+
+.personalizado:active {
+    background-color: #a42532 !important;
     border-color: #a42532 !important;
     box-shadow: 0 0 20px 1px rgba(128, 128, 128, 0.166);
 }
-.personalizado:focus-visible{
-    background-color: #a42532 !important; 
+
+.personalizado:focus-visible {
+    background-color: #a42532 !important;
     border-color: #a42532 !important;
     outline: solid 1.5px #a42532;
     outline-offset: 2px;
     box-shadow: none;
 }
-

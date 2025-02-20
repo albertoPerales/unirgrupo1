@@ -1,11 +1,22 @@
-h1 {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
     text-align: center;
     color: #333;
     margin-top: 20px;
     animation: fadeIn 1s ease-in-out;
-}
+  }
 
-#sesion-iniciada {
+  .hidden {
+    display: none;
+  }
+
+  #sesion-iniciada {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,25 +29,25 @@ h1 {
     top: 70px;
     right: 20px;
     z-index: 1000;
-}
+  }
 
-#username-display {
+  #username-display {
     font-size: 0.9rem;
     color: #495057;
     margin-bottom: 8px;
-}
+  }
 
-.botones .btn {
+  .botones .btn {
     transition: all 0.3s ease;
     font-size: 0.8rem;
-}
+  }
 
-.botones .btn:hover {
+  .botones .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
+  }
 
-.botones .btn-outline-danger {
+  .botones .btn-outline-danger {
     color: #dc3545;
     border-color: #dc3545;
-}
+  }

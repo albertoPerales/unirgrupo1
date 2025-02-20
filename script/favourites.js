@@ -1,6 +1,3 @@
-const API_KEY = "b89b1e1077ca792380cfdc3b05ff9966";
-const BASE_URL = `https://api.themoviedb.org/3`;
-
 const getFavorites = () => {
   return JSON.parse(localStorage.getItem("favorites")) || [];
 };
@@ -35,7 +32,7 @@ const fetchFavoriteMovies = async () => {
   return movies.filter((movie) => movie !== null);
 };
 
-const renderMovies = (movies, containerId, title) => {
+const renderFavMovies = (movies, containerId, title) => {
   const container = document.getElementById(containerId);
 
   if (!container) return;
@@ -52,10 +49,12 @@ const renderMovies = (movies, containerId, title) => {
       <div class="movie-card">
         <div class="card bg-dark text-white">
           <button aria-label=Borrar ${movie.title} de favoritos" id="fav-btn-${movie.id}" class="fav-btn btn btn-danger position-absolute top-10 end-0 mt-2 me-2 fs-5" onclick="removeMovieFromFavs(${movie.id})">X</button>
-          <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="${movie.title}">
+          <a href="./detail.html?id=${movie.id}">
+            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" class="card-img-top" alt="${movie.title}">
+          </a>
           <div class="card-body">
             <h3 class="card-title fs-5">
-              <a href="#" class="text-white text-decoration-none">
+              <a href="./detail.html?id=${movie.id}" class="text-white text-decoration-none">
                 ${movie.title}
               </a>
             </h3>
@@ -83,7 +82,11 @@ const removeMovieFromFavs = (movieId) => {
 
 const renderFavorites = async () => {
   const favoriteMovies = await fetchFavoriteMovies();
-  renderMovies(favoriteMovies, "favorites-container", "Tus películas favoritas");
+  renderFavMovies(
+    favoriteMovies,
+    "favorites-container",
+    "Tus películas favoritas"
+  );
 };
 
 document.addEventListener("DOMContentLoaded", renderFavorites);
