@@ -11,7 +11,12 @@ const setFavorites = (favorites) => {
 };
 
 // Renders
-const renderMovie = (movie) => {
+const renderMovie = (movie, level) => {
+  const levels = {
+    first: `./views/detail.html?id=${movie.id}`,
+    second: `../views/detail.html?id=${movie.id}`,
+  };
+
   return `
   <div class="movie-card">
     <div class="card bg-dark text-white">
@@ -22,15 +27,15 @@ const renderMovie = (movie) => {
   })">
         ${getFavoriteIcon(movie.id)}
       </button>
-      <a href="./views/detail.html?id=${movie.id}">
+      <a href="${levels[level]}">
         <img src="https://image.tmdb.org/t/p/w500${
           movie.poster_path
         }" class="card-img-top" alt="${movie.title}">
       </a>
       <div class="card-body">
         <h3 class="card-title fs-5">
-          <a href="./views/detail.html?id=${
-            movie.id
+          <a href="href="${
+            levels[level]
           }" class="text-white text-decoration-none">
             ${movie.title}
           </a>

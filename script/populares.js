@@ -12,7 +12,7 @@ const fetchMoviesData = async (endpoint) => {
 
 const renderMoviesBySection = (movies, containerId, title, sliderClass) => {
   const sectionHeader = `<h2 class="text-start text-danger mb-4">${title}</h2>`;
-  const sectionMovies = movies.map((movie) => renderMovie(movie)).join("");
+  const sectionMovies = movies.map((movie) => renderMovie(movie, "first")).join("");
 
   document.getElementById(containerId).innerHTML = `
    ${sectionHeader}

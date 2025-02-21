@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     movies.forEach((movie) => {
       const movieCard = document.createElement("div");
       movieCard.classList.add("col-md-3", "mb-4");
-      movieCard.innerHTML = renderMovie(movie);
+      movieCard.innerHTML = renderMovie(movie, "second");
       moviesContainer.appendChild(movieCard);
       updateFavoriteButton(movie.id);
     });
