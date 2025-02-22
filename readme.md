@@ -1,7 +1,7 @@
 # 🚀 Grupo 1: Creando una web app funcional.
 
 Este proyecto ha sido desarrollado como parte de la asignatura **Desarrollo Web Responsive** del **Máster en Diseño y Desarrollo de Interfaces Web**.
-**URL al repositorio:** https://github.com/albertoPerales/unirgrupo1
+**URL al repositorio:** https://github.com/albertoPerales/unirgrupo2
 
 ## ❗ A considerar
 
@@ -19,7 +19,7 @@ No obstante, para mantener la funcionalidad requerida de eliminación total de l
 - Bootstrap
 - Slick.js
 
-## 👥 Integrantes del grupo
+## 👥 Integrantes del Grupo 2
 
 - Alberto Perales Lafuente
 - Nazek Koshaji Loubani
